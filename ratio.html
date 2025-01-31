@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profit/Loss Calculator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light">
+
+  <div class="container mt-5">
+    <div class="card shadow-lg p-4">
+      <h2 class="text-center text-primary">Profit/Loss Calculator</h2>
+
+      <!-- Partner Input Section -->
+      <div class="row g-3 mt-3">
+        <div class="col-md-5">
+          <input type="text" id="name" class="form-control" placeholder="Partner Name" required>
+        </div>
+        <div class="col-md-5">
+          <input type="number" id="capital" class="form-control" placeholder="Capital Investment" required>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-success w-100" onclick="addPartner()">Add</button>
+        </div>
+      </div>
+
+      <!-- Partner List -->
+      <h4 class="mt-4">Partners</h4>
+      <ul id="partnerList" class="list-group mb-4"></ul>
+
+      <!-- Profit/Loss Input -->
+      <div class="row g-3">
+        <div class="col-md-8">
+          <input type="number" id="profitLoss" class="form-control" placeholder="Total Profit/Loss">
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-primary w-100" onclick="calculateShares()">Calculate</button>
+        </div>
+      </div>
+
+      <!-- Result Section -->
+      <h4 class="mt-4">Results</h4>
+      <ul id="resultList" class="list-group"></ul>
+    </div>
+  </div>
+
+  <script src="./src/js/ratio.js"></script>
+</body>
+
+</html>
